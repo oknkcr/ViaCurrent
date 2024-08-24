@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB Via Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PCB Via Calculator</h1>
+        <form id="viaForm">
+            <div class="input-group">
+                <label for="viaDiameter">Via Diameter (mm):</label>
+                <input type="number" id="viaDiameter" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="platingThickness">Plating Thickness (µm):</label>
+                <input type="number" id="platingThickness" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="pcbThickness">PCB Thickness (mm):</label>
+                <input type="number" id="pcbThickness" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="tempRise">Temperature Rise (°C):</label>
+                <input type="number" id="tempRise" step="0.1" required>
+            </div>
+            <div class="input-group">
+                <label for="internalPadDiameter">Internal Pad Diameter (mm):</label>
+                <input type="number" id="internalPadDiameter" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="refPlaneOpeningDiameter">Reference Plane Opening Diameter (mm):</label>
+                <input type="number" id="refPlaneOpeningDiameter" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="ambientTemp">Ambient Temperature (°C):</label>
+                <input type="number" id="ambientTemp" step="0.1" required>
+            </div>
+            <div class="input-group">
+                <label for="current">Current (A):</label>
+                <input type="number" id="current" step="0.01" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="results">
+            <h2>Results</h2>
+            <p id="areaResult"></p>
+            <p id="currentCapacityResult"></p>
+            <p id="resistanceResult"></p>
+            <p id="voltageDropResult"></p>
+            <p id="powerLossResult"></p>
+            <p id="inductanceResult"></p>
+            <p id="capacitanceResult"></p>
+            <p id="impedanceResult"></p>
+            <p id="resonantFreqResult"></p>
+            <p id="stepResponseResult"></p>
+            <p id="aspectRatioResult"></p>
+            <p id="viaTempResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
